@@ -1,0 +1,6 @@
+{
+  "name": "UIForge Desktop",
+  "description": "A modern, lightweight desktop-style Android operating environment featuring a customizable workspace, taskbar, Start menu, multi-window manager, and built-in offline productivity tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

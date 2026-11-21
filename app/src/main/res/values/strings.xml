@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UIForge Desktop</string>
+    <string name="start_button_label">Start</string>
+    <string name="search_apps_hint">Search apps, tools &amp; settings…</string>
+    <string name="desktop_welcome_title">UIForge Desktop</string>
+    <string name="offline_status_ready">Offline Workspace</string>
+    <string name="action_minimize">Minimize</string>
+    <string name="action_maximize">Maximize</string>
+    <string name="action_restore">Restore</string>
+    <string name="action_close">Close</string>
+    <string name="action_show_desktop">Show Desktop</string>
+    <string name="action_refresh_desktop">Refresh Desktop</string>
+    <string name="action_change_wallpaper">Change Wallpaper</string>
+    <string name="action_manage_shortcuts">Manage Shortcuts</string>
+    <string name="action_open_settings">Open Settings</string>
+    <string name="action_about_uiforge">About UIForge Desktop</string>
+    <string name="about_copyright">© 2026 UIForge. Built natively for Android with Kotlin &amp; Jetpack Compose.</string>
+</resources>
