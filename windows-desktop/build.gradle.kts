@@ -15,7 +15,6 @@ kotlin {
 dependencies {
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
-    implementation(compose.materialIconsExtended)
 }
 
 compose.desktop {
@@ -24,7 +23,12 @@ compose.desktop {
 
         buildTypes.release {
             proguard {
-                isEnabled.set(false)
+                isEnabled.set(true)
+                optimize.set(true)
+                obfuscate.set(true)
+                configurationFiles.from(
+                    project.file("proguard-rules.pro")
+                )
             }
         }
 
