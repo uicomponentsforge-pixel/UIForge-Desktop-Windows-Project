@@ -1,3 +1,4 @@
+
 name: Build UIForge Desktop for Windows
 
 on:
@@ -7,9 +8,13 @@ on:
       - 'windows-desktop/**'
       - '.github/workflows/build-windows.yml'
 
+permissions:
+  contents: write
+
 jobs:
   build-windows:
     runs-on: windows-latest
+
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -29,9 +34,11 @@ jobs:
         working-directory: windows-desktop
         run: gradle packageReleaseExe packageReleaseMsi
 
-      - name: Upload Windows installers
-        uses: actions/upload-artifact@v4
+      - name: Publish EXE and MSI installers
+        uses: softprops/action-gh-release@v2
         with:
-          name: UIForge-Desktop-Windows
-          path: windows-desktop/build/compose/binaries/main-release/**
-          if-no-files-found: error
+          tag_name: desktop-v1
+          name: UIForge Desktop for Windows
+          files: |
+            windows-desktop/build/compose/binaries/main-release/**/*.exe
+            windows-desktop/build/compose/binaries/main-release/**/*.msi
